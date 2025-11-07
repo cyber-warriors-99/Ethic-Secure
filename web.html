@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethic Secure 🛡️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#1e40af',
+            accent: '#8b5cf6',
+            dark: '#1e293b',
+            neon: '#00ff00'
+          },
+          fontFamily: {
+            mono: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Fira Code', monospace;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .card {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 0, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 255, 0, 0.2);
+      border-color: rgba(0, 255, 0, 0.4);
+    }
+    .social-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .social-icon:hover {
+      transform: scale(1.1) rotate(15deg);
+      border-color: rgba(0, 255, 0, 0.5);
+    }
+    .neon-text {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+      color: #00ff00;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+      }
+      to {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+      }
+    }
+    .circuit-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      pointer-events: none;
+      background:
+        linear-gradient(45deg, transparent 49%, rgba(0,255,0,0.1) 50%, transparent 51%),
+        linear-gradient(135deg, transparent 49%, rgba(0,255,0,0.1) 50%, transparent 51%),
+        linear-gradient(225deg, transparent 49%, rgba(0,255,0,0.1) 50%, transparent 51%),
+        linear-gradient(315deg, transparent 49%, rgba(0,255,0,0.1) 50%, transparent 51%);
+      background-size: 10px 10px;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden">
+  <div class="circuit-pattern"></div>
+
+  <!-- Header -->
+  <header class="relative z-10 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg py-4 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center mb-4 md:mb-0">
+        <div class="bg-neon w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+          <i class="fas fa-shield-alt text-black text-xl"></i>
+        </div>
+        <h1 class="text-2xl font-bold text-white">Ethic Secure 🛡️</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mx-auto px-6 py-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left Section -->
+      <div class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-6 rounded-xl card">
+        <div class="text-center mb-6">
+          <h2 class="text-3xl font-bold text-neon mb-4"></h2>
+          <p class="text-gray-300 text-sm mb-6">Learn cybersecurity, penetration testing, and ethical hacking through hands-on labs and expert-led courses.</p>
+        </div>
+        <div class="space-y-4">
+          <button class="w-full bg-neon text-black font-bold py-3 px-6 rounded-lg hover:bg-green-400 transition-colors">
+            Start Learning
+          </button>
+          <button class="w-full border border-neon text-neon font-bold py-3 px-6 rounded-lg hover:bg-neon hover:text-black transition-colors">
+            Explore Tools
+          </button>
+        </div>
+      </div>
+
+      <!-- Center Section -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-neon text-center mb-6">Educational Resources</h2>
+
+        <div class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-6 rounded-xl card">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-laptop-code text-neon text-2xl mr-3"></i>
+            <h3 class="text-xl font-bold text-neon">Hands-on Labs</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Practice real-world scenarios in secure virtual environments.</p>
+        </div>
+
+        <div class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-6 rounded-xl card">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-graduation-cap text-neon text-2xl mr-3"></i>
+            <h3 class="text-xl font-bold text-neon">Certification Prep</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Prepare for CEH, OSCP, and CompTIA Security+ certifications.</p>
+        </div>
+
+        <div class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-6 rounded-xl card">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-book-open text-neon text-2xl mr-3"></i>
+            <h3 class="text-xl font-bold text-neon">Comprehensive Courses</h3>
+          </div>
+          <p class="text-gray-300 text-sm">From beginner to advanced — network security, web app security, and more.</p>
+        </div>
+      </div>
+
+<!-- Right Section - Contact Links -->
+<div class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-6 rounded-xl card">
+  <h2 class="text-3xl font-bold text-neon mb-6 text-center">Connect With Us</h2>
+  <p class="text-gray-300 text-sm mb-6 text-center">
+    Follow us for updates, tutorials, and ethical hacking tips.
+  </p>
+
+  <!-- 3x2 Grid Layout -->
+  <div class="grid grid-cols-3 gap-6 place-items-center">
+    <a href="https://www.instagram.com/its._.mukesh._.9?igsh=cTk3MXA3dHU0N21o" target="_blank"
+      class="social-icon bg-pink-500 hover:bg-pink-600 text-white">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/yourusername" target="_blank"
+      class="social-icon bg-blue-600 hover:bg-blue-700 text-white">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com/yourusername" target="_blank"
+      class="social-icon bg-blue-400 hover:bg-blue-500 text-white">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://youtube.com/@yourchannel" target="_blank"
+      class="social-icon bg-red-600 hover:bg-red-700 text-white">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/yourusername" target="_blank"
+      class="social-icon bg-purple-600 hover:bg-purple-700 text-white">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/yourusername" target="_blank"
+      class="social-icon bg-blue-800 hover:bg-blue-900 text-white">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-6 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm">© 2024 Ethical Hacking Academy. All rights reserved.</p>
+            <p class="text-gray-500 text-xs mt-2">This is an educational platform for learning ethical hacking techniques.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 12px 40px rgba(0, 255, 0, 0.2)';
+                    card.style.borderColor = 'rgba(0, 255, 0, 0.4)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 8px 32px rgba(0, 255, 0, 0.1)';
+                    card.style.borderColor = 'rgba(0, 255, 0, 0.2)';
+                });
+            });
+            
+            // Add click effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        button.style.transform = 'scale(1)';
+                    }, 100);
+                });
+            });
+            
+            // Add pulsing effect to neon text
+            const neonTextElements = document.querySelectorAll('.neon-text');
+            neonTextElements.forEach(element => {
+                element.style.animation = 'glow 2s ease-in-out infinite alternate';
+            });
+        });
+    </script>
+</body>
+</html>
+
